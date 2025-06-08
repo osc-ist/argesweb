@@ -1,0 +1,878 @@
+/* Reset ve Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('images/anasayfa.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body.iletisim-bg {
+    background: url('images/tel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body.hakkimizda-bg h1,
+body.hakkimizda-bg h2,
+body.hakkimizda-bg h3,
+body.hakkimizda-bg p {
+    color: #FFD600 !important;
+}
+
+body.hakkimizda-bg .about-section h2,
+body.hakkimizda-bg .about-section p,
+body.hakkimizda-bg .mission-vision h3,
+body.hakkimizda-bg .mission-vision p,
+body.hakkimizda-bg .values h2,
+body.hakkimizda-bg .values h3,
+body.hakkimizda-bg .values p {
+    color: #fff !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header ve Navigasyon */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar {
+    height: 56px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 24px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 0 10px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #2563eb;
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1, .hero p {
+    background: linear-gradient(90deg, #e5e4e2 0%, #bfc1c2 40%, #f7f7f7 60%, #a7a7a7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    filter: brightness(1.2) drop-shadow(0 1px 6px #fff8);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Hizmetler Section */
+.services {
+    padding: 80px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #e5e4e2 0%, #bfc1c2 40%, #f7f7f7 60%, #a7a7a7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    filter: brightness(1.2) drop-shadow(0 1px 6px #fff8);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    margin: 20px 20px 10px;
+    color: #2563eb;
+}
+
+.service-card p {
+    margin: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Referanslar Section */
+.references {
+    padding: 80px 0;
+}
+
+.references h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.reference-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.reference-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.reference-card h3 {
+    padding: 20px 20px 10px;
+}
+
+.reference-card p {
+    padding: 0 20px 20px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3, .footer-section h3:has(+ .social-links) {
+    color: #FFA500;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #FFA500;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFD600;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Ürünler Sayfası Stilleri */
+.products {
+    padding: 80px 0;
+    background: none;
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+    background: #007bff;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    background: none;
+}
+
+/* Ürün Kartı Stilleri */
+.product-card {
+    background: none;
+    box-shadow: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.details-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+    background: #1d4ed8;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin: 0 0 0.5rem;
+    color: #1f2937;
+    font-size: 1.25rem;
+}
+
+.product-info p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.product-card h3 {
+    color: #fff;
+}
+
+.product-card p {
+    color: #fff;
+}
+
+/* Alt Kategori Filtreleri */
+.subcategory-filters {
+    margin: 2rem 0;
+    display: none;
+}
+
+.subcategory-filters.active {
+    display: block;
+}
+
+.subcategory-group {
+    display: none;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.subcategory-group.active {
+    display: flex;
+}
+
+.subcategory-btn {
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    color: #495057;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subcategory-btn:hover {
+    background: #e9ecef;
+    border-color: #ced4da;
+}
+
+.subcategory-btn.active {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .product-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subcategory-group {
+        flex-direction: column;
+    }
+
+    .subcategory-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .navbar,
+    .navbar .container {
+        min-height: 70px;
+        padding: 1rem 1rem;
+    }
+    .logo img {
+        height: 50px !important;
+    }
+}
+
+/* Modal Stilleri */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 98vw;
+    max-width: 1800px;
+    margin: auto;
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 1;
+}
+
+.modal-media {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    width: 48vw;
+    height: 60vh;
+    max-width: 700px;
+    max-height: 700px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.modal-video-container {
+    width: 48vw;
+    height: 60vh;
+    max-width: 700px;
+    max-height: 700px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.modal-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.modal-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.modal-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.modal-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.modal-features li i {
+    color: #2563eb;
+}
+
+@media (max-width: 1100px) {
+    .modal-media {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .modal-image, .modal-video-container {
+        width: 90vw;
+        height: 35vh;
+        max-width: 98vw;
+        max-height: 350px;
+    }
+}
+
+.logo-ortala {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000;
+    padding: 0 16px;
+    background: none;
+}
+.logo-ortala img {
+    height: 160px;
+    width: auto;
+    display: block;
+}
+@media (max-width: 900px) {
+    .logo-ortala {
+        position: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: unset;
+        left: unset;
+        transform: none;
+        margin: 16px 0;
+    }
+    .logo-ortala img {
+        height: 120px;
+    }
+    .about-section .container {
+        padding: 0 10px;
+    }
+    .about-content, .mission-vision, .values {
+        padding: 0 0 32px 0;
+    }
+    .about-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .about-section p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    .mission-vision {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .mission, .vision {
+        width: 100%;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .mission i, .vision i {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .value-card {
+        padding: 18px 10px;
+        text-align: center;
+    }
+    .value-card i {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        height: 30vh !important;
+        padding: 24px 0 !important;
+    }
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+    .about-section h2 {
+        font-size: 1.3rem;
+    }
+    .about-section p {
+        font-size: 0.98rem;
+    }
+    .mission-vision {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .mission, .vision {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .value-card {
+        padding: 12px 4px;
+        font-size: 0.98rem;
+    }
+    .value-card i {
+        font-size: 1.5rem;
+    }
+    .lightbox img {
+        max-width: 98vw;
+        max-height: 70vh;
+    }
+    .lightbox-close {
+        top: 12px;
+        right: 16px;
+        font-size: 2rem;
+    }
+}
+
+.zoom-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(37,99,235,0.85);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.zoom-btn:hover {
+    background: #2563eb;
+}
+
+.lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    z-index: 3000;
+}
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.lightbox-close {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3100;
+    font-weight: bold;
+    text-shadow: 0 2px 8px #000a;
+} 

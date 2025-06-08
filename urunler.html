@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürünlerimiz - ARGES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Logo Sol-Orta -->
+    <div class="logo-ortala">
+        <img src="images/logo.png" alt="ARGES Logo">
+    </div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="urunler.html" class="active">Ürünlerimiz</a>
+                    <a href="referanslar.html">Referanslar</a>
+                    <a href="iletisim.html">İletişim</a>
+                </div>
+                <button class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="height: 40vh;">
+        <div class="hero-content">
+            <h1>Ürünlerimiz</h1>
+            <p>Endüstriyel otomasyon çözümlerimiz</p>
+        </div>
+    </section>
+
+    <!-- Ürünler Section -->
+    <section class="products">
+        <div class="container">
+            <!-- Ana Kategoriler -->
+            <!-- Filtre butonları kaldırıldı -->
+
+            <!-- Alt Kategoriler -->
+            <div class="subcategory-filters">
+                <div class="subcategory-group" data-category="mlers">
+                    <button class="subcategory-btn" data-filter="videowall">Videowall Sistemleri</button>
+                    <button class="subcategory-btn" data-filter="digitalsignage">Digital Signage Sistemleri</button>
+                    <button class="subcategory-btn" data-filter="ledekran">Led Ekran Çözümleri</button>
+                    <button class="subcategory-btn" data-filter="holotabela">Holotabela</button>
+                </div>
+                <div class="subcategory-group" data-category="avm">
+                    <button class="subcategory-btn" data-filter="yonlendirme">AVM Yönlendirme ve Bilgilendirme</button>
+                    <button class="subcategory-btn" data-filter="aynatv">Ayna TV (Magic Mirror TV)</button>
+                    <button class="subcategory-btn" data-filter="menuboard">Dijital Menüboard Sistemleri</button>
+                </div>
+                <div class="subcategory-group" data-category="endustriyel">
+                    <button class="subcategory-btn" data-filter="andon">Andon TV ve Pano</button>
+                    <button class="subcategory-btn" data-filter="uretim">Üretim Takip</button>
+                    <button class="subcategory-btn" data-filter="endustriyel-ekran">Endüstriyel Ekran Çözümleri</button>
+                </div>
+            </div>
+
+            <!-- Ürün Grid -->
+            <div class="products-grid">
+                <!-- Videowall -->
+                <div class="product-card" data-category="mlers" data-subcategory="videowall">
+                    <div class="product-image">
+                        <img src="images/products/videowall-1.jpg" alt="Videowall Sistemi">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="videowall">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Videowall Sistemi</h3>
+                        <p>Yüksek çözünürlüklü video duvarı çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 4K</span>
+                            <span><i class="fas fa-expand"></i> 3x3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Signage -->
+                <div class="product-card" data-category="mlers" data-subcategory="digitalsignage">
+                    <div class="product-image">
+                        <img src="images/products/digitalsignage-1.jpg" alt="Digital Signage Sistemi">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="digitalsignage">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Digital Signage Sistemi</h3>
+                        <p>Dijital bilgilendirme ve reklam çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 55"</span>
+                            <span><i class="fas fa-wifi"></i> WiFi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LED Ekran -->
+                <div class="product-card" data-category="mlers" data-subcategory="ledekran">
+                    <div class="product-image">
+                        <img src="images/products/ledscreen-1.jpg" alt="LED Ekran">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="ledscreen">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>LED Ekran</h3>
+                        <p>Yüksek parlaklıklı LED ekran çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-sun"></i> 5000nit</span>
+                            <span><i class="fas fa-expand"></i> 4x6m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Holotabela -->
+                <div class="product-card" data-category="mlers" data-subcategory="holotabela">
+                    <div class="product-image">
+                        <img src="images/products/holotabela-1.jpg" alt="Holotabela">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="holotabela">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Holotabela</h3>
+                        <p>3D holografik görüntüleme teknolojisi</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-cube"></i> 3D</span>
+                            <span><i class="fas fa-expand"></i> 65"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mlers" data-subcategory="holotabela">
+                    <div class="product-image">
+                        <img src="images/products/holotabela-2.jpg" alt="Holotabela Pro">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="holotabela">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Holotabela Pro</h3>
+                        <p>Yüksek çözünürlüklü holografik görüntüleme sistemi</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-cube"></i> 4K</span>
+                            <span><i class="fas fa-expand"></i> 75"</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AVM Yönlendirme -->
+                <div class="product-card" data-category="avm" data-subcategory="yonlendirme">
+                    <div class="product-image">
+                        <img src="images/products/avm-1.jpg" alt="AVM Yönlendirme Sistemi">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="avm">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AVM Yönlendirme Sistemi</h3>
+                        <p>Akıllı yönlendirme ve bilgilendirme çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-touch"></i> Dokunmatik</span>
+                            <span><i class="fas fa-map"></i> 3D Harita</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ayna TV -->
+                <div class="product-card" data-category="avm" data-subcategory="aynatv">
+                    <div class="product-image">
+                        <img src="images/products/magicmirror-1.jpg" alt="Ayna TV">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="magicmirror">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ayna TV</h3>
+                        <p>Magic Mirror teknolojisi ile ayna TV çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 43"</span>
+                            <span><i class="fas fa-camera"></i> Kamera</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menüboard -->
+                <div class="product-card" data-category="avm" data-subcategory="menuboard">
+                    <div class="product-image">
+                        <img src="images/products/menuboard-1.jpg" alt="Dijital Menüboard">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="menuboard">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dijital Menüboard</h3>
+                        <p>Restoran ve kafe için dijital menü çözümü</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 32"</span>
+                            <span><i class="fas fa-wifi"></i> WiFi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Andon TV -->
+                <div class="product-card" data-category="endustriyel" data-subcategory="andon">
+                    <div class="product-image">
+                        <img src="images/products/andon-1.jpg" alt="Andon TV">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="andon">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Andon TV</h3>
+                        <p>Üretim hattı takip ve kontrol sistemi</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 55"</span>
+                            <span><i class="fas fa-industry"></i> OPC UA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="endustriyel" data-subcategory="uretim">
+                    <div class="product-image">
+                        <img src="images/products/industrial-1.jpg" alt="Üretim Takip Sistemi">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="industrial">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Üretim Takip Sistemi</h3>
+                        <p>Gerçek zamanlı üretim takip ve raporlama</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-chart-line"></i> Dashboard</span>
+                            <span><i class="fas fa-database"></i> SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endüstriyel Ekran -->
+                <div class="product-card" data-category="endustriyel" data-subcategory="endustriyel-ekran">
+                    <div class="product-image">
+                        <img src="images/products/endustriyel-ekran-1.jpg" alt="Endüstriyel Ekran">
+                        <div class="product-overlay">
+                            <button class="details-btn" data-product="endustriyel-ekran">Detaylar</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Endüstriyel Ekran</h3>
+                        <p>Zorlu endüstriyel ortamlar için özel ekran</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-tv"></i> 42"</span>
+                            <span><i class="fas fa-shield-alt"></i> IP65</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ARGES</h3>
+                    <p>Endüstriyel otomasyon ve mühendislik çözümleri</p>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Mimar Sinan Mah. Mehtap Cad. No:48-1, Ataşehir, İstanbul</p>
+                    <p><i class="fas fa-phone"></i> +90 (507) 762 98 59</p>
+                    <p><i class="fas fa-envelope"></i> info@arges.com.tr</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Sosyal Medya</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ARGES. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-media">
+                <img src="" alt="" class="modal-image">
+                <div class="modal-video-container">
+                    <video class="modal-video" controls>
+                        <source src="" type="video/mp4">
+                        Tarayıcınız video oynatmayı desteklemiyor.
+                    </video>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h2></h2>
+                <p></p>
+                <div class="modal-features"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" style="display:none;">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="Büyük Görsel" id="lightboxImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
